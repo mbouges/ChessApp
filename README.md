@@ -1,16 +1,63 @@
-# React + Vite
+# Chess Puzzle App
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A modern, interactive Chess Puzzle application built with **React** and **Vite**. This app tests your chess tactics by presenting puzzles (FEN positions) that must be solved with the correct sequence of moves.
 
-Currently, two official plugins are available:
+## Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- **Interactive Board**: Fully functional 8x8 chess board using Unicode pieces.
+- **Puzzle Engine**:
+  - Loads puzzles from FEN strings.
+  - Validates user moves against the correct solution.
+  - Provides instant feedback (Correct/Incorrect).
+- **Game Logic**: robust move validation and rule enforcement powered by `chess.js`.
+- **UI/UX**:
+  - Dark mode "Glassmorphism" aesthetic.
+  - Responsive design.
+  - Highlighted valid squares and move history.
 
-## React Compiler
+## Tech Stack
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- **Frontend Framework**: [React](https://react.dev/)
+- **Build Tool**: [Vite](https://vitejs.dev/)
+- **Chess Logic**: [chess.js](https://github.com/jhlywa/chess.js)
+- **Styling**: Vanilla CSS (Variables, Flexbox, Grid)
 
-## Expanding the ESLint configuration
+## Getting Started
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+### Prerequisites
+
+- Node.js (v20+ recommended)
+- npm
+
+### Installation
+
+1. **Clone the repository**
+   ```bash
+   git clone https://github.com/mbouges/ChessApp.git
+   cd ChessApp
+   ```
+
+2. **Install dependencies**
+   ```bash
+   npm install
+   ```
+
+3. **Run the development server**
+   ```bash
+   npm run dev
+   ```
+
+4. **Build for production**
+   ```bash
+   npm run build
+   ```
+
+## Troubleshooting
+
+### Node.js Compatibility
+If you encounter `crypto.hash is not a function` errors, it likely means you are on Node.js v20.11.1 using a version of Vite that requires v20.12+.
+This project has been configured with `vite@^5.4.11` to ensure compatibility with Node.js v20.11.1.
+
+## License
+
+[MIT](LICENSE)
